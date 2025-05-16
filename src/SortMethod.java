@@ -3,5 +3,6 @@ public enum SortMethod {
     GOLS,
     VITORIAS,
     EMPATES,
-    DERROTAS
+    DERROTAS,
+    GOLS_CONTRA
 }

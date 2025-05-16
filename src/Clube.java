@@ -1,6 +1,6 @@
 public class Clube {
     private int titulos = 0;
-    private int golsPro = 0;
+    private int golsPro = 0, golsContra;
     private String nome;
     private int vitorias, empates, derrotas;
     
@@ -26,6 +26,14 @@ public class Clube {
     
     public String getNome(){
         return this.nome;
+    }
+
+    public int getGolsContra() {
+        return this.golsContra;
+    }
+
+    public void addGolContra(int golsContra) {
+        this.golsContra += golsContra;
     }
 
     public void addVitorias(int vitorias) {
@@ -54,8 +62,10 @@ public class Clube {
 
     @Override
     public String toString() {
-        return "Clube [titulos=" + titulos + ", golsPro=" + golsPro + ", nome=" + nome + ", vitorias=" + vitorias
-                + ", empates=" + empates + ", derrotas=" + derrotas + "]";
+        return String.format(
+            "%s, %d títulos, %d gols, %d vitórias, %d empates, %d derrotas, %d gols contra",
+            nome, titulos, golsPro, vitorias, empates, derrotas, golsContra
+        );
     }
 
 }

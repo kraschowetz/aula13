@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        FileLoader l = new FileLoader(SortMethod.VITORIAS);
+        FileLoader l = new FileLoader(SortMethod.GOLS_CONTRA);
         System.exit(0);
 
         String string2003 = "Pos.,Equipes,P,J,V,E,D,GP,GC,SG,%\n" +

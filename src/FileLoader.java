@@ -30,6 +30,7 @@ public class FileLoader {
 
             lista.add(new Clube(s.split(",")[1]));
             lista.get(i).addGolsPro(Integer.parseInt(s.split(",")[7]));
+            lista.get(i).addGolContra(Integer.parseInt(s.split(",")[8]));
             lista.get(i).addVitorias(Integer.parseInt(s.split(",")[4]));
             lista.get(i).addDerrotas(Integer.parseInt(s.split(",")[6]));
             lista.get(i).addEmpates(Integer.parseInt(s.split(",")[5]));
@@ -78,6 +79,9 @@ public class FileLoader {
                 break;
             case DERROTAS:
                 _clubes.sort(Comparator.comparing(Clube::getDerrotas));
+                break;
+            case GOLS_CONTRA:
+                _clubes.sort(Comparator.comparing(Clube::getGolsContra));
                 break;
 
         }
